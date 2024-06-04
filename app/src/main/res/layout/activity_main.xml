@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/gamebackground2"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/game_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="616dp"
+        android:background="@color/black"
+        android:text="Score: 0"
+        android:textColor="@color/bg_color"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/savebuttongame"
+        app:layout_constraintEnd_toEndOf="@+id/game_container"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/game_container"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <FrameLayout
+        android:id="@+id/game_container"
+        android:layout_width="312dp"
+        android:layout_height="332dp"
+        android:layout_marginBottom="239dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.lab5assignment.GameView
+            android:id="@+id/game_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000" />
+
+        <TextView
+            android:id="@+id/game_status"
+            android:layout_width="match_parent"
+            android:layout_height="326dp"
+            android:fontFamily="@font/metal_mania"
+            android:gravity="center"
+            android:text="@string/game_over"
+            android:textColor="@color/text_color"
+            android:textSize="30dp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnShow"
+        android:layout_width="122dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="519dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#2338EE"
+        android:text="speed"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/backbuttongame"
+        app:layout_constraintEnd_toStartOf="@id/backbuttongame"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="@id/game_score"
+        app:layout_constraintTop_toTopOf="@id/game_score"
+        app:layout_constraintVertical_bias="0.419"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/game_control_btn"
+        android:layout_width="48dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginEnd="86dp"
+        android:layout_marginBottom="85dp"
+        android:background="@android:drawable/ic_lock_power_off"
+        android:backgroundTint="#808080"
+        android:textColor="#808080"
+        android:textColorHighlight="#808080"
+        android:textColorLink="#808080"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/up_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/right_btn"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.693"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/down_btn"
+        android:layout_width="64dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/game_control_btn"
+        app:layout_constraintEnd_toEndOf="@id/backbuttongame"
+        app:layout_constraintEnd_toStartOf="@+id/savebuttongame"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintStart_toEndOf="@+id/backbuttongame"
+        app:layout_constraintStart_toStartOf="@+id/backbuttongame"
+        app:layout_constraintTop_toTopOf="@+id/up_btn"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/downbutton"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/left_btn"
+        android:layout_width="45dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/btnShow"
+        app:layout_constraintEnd_toEndOf="@+id/right_btn"
+        app:layout_constraintEnd_toStartOf="@+id/down_btn"
+        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintStart_toEndOf="@id/savebuttongame"
+        app:layout_constraintStart_toStartOf="@id/right_btn"
+        app:layout_constraintTop_toBottomOf="@id/up_btn"
+        app:layout_constraintVertical_bias="0.325"
+        app:srcCompat="@drawable/leftbtn"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/right_btn"
+        android:layout_width="68dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="175dp"
+        app:layout_constraintBottom_toBottomOf="@id/down_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/down_btn"
+        app:layout_constraintTop_toTopOf="@+id/up_btn"
+        app:layout_constraintVertical_bias="0.156"
+        app:srcCompat="@drawable/rightbtn"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/up_btn"
+        android:layout_width="79dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="34dp"
+        app:layout_constraintBottom_toTopOf="@id/btnShow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.196"
+        app:layout_constraintStart_toEndOf="@+id/btnShow"
+        app:layout_constraintTop_toBottomOf="@id/backbuttongame"
+        app:layout_constraintVertical_bias="0.617"
+        app:srcCompat="@drawable/upbtn"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/savebuttongame"
+        android:layout_width="181dp"
+        android:layout_height="60dp"
+
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toBottomOf="@id/backbuttongame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/backbuttongame"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.906"
+        app:srcCompat="@drawable/savebtn"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/backbuttongame"
+        android:layout_width="164dp"
+        android:layout_height="52dp"
+
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/savebuttongame"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/up_btn"
+        app:layout_constraintVertical_bias="0.846"
+        app:srcCompat="@drawable/backbtn"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="416dp"
+        android:layout_height="378dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="135dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/backbuttongame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"></LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

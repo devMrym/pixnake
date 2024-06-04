@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Snake</string>
+    <string name="game_over">GAME OVER</string>
+
+    <string name="dialog_message">   .</string>
+    <string name="dialog_title"> Javapoint Alert Dialog Message</string>
+
+</resources>

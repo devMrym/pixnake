@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:textColor="@color/white"
+    tools:context=".scorespage">
+
+    <ImageView
+        android:id="@+id/trophy1"
+        android:layout_width="147dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="438dp"
+        app:layout_constraintBottom_toTopOf="@+id/BackToHomePageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trophy" />
+
+    <ImageView
+        android:id="@+id/trophy2"
+        android:layout_width="167dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="244dp"
+        android:layout_marginBottom="438dp"
+        app:layout_constraintBottom_toTopOf="@+id/BackToHomePageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.485"
+        app:srcCompat="@drawable/trophy" />
+
+    <Button
+        android:id="@+id/btnSortBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#FF1CC0"
+        android:text="Sort By"
+        app:layout_constraintStart_toStartOf="@+id/trophy1"
+        app:layout_constraintTop_toBottomOf="@+id/trophy1" />
+
+    <ImageView
+
+        android:id="@+id/imageView6"
+        android:layout_width="413dp"
+        android:layout_height="216dp"
+        android:layout_marginBottom="413dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/BackToHomePageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.457"
+        app:srcCompat="@drawable/scorestitle" />
+
+    <ImageButton
+        android:id="@+id/BackToHomePageButton"
+        android:layout_width="191dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="28dp"
+        android:contentDescription=" "
+        android:hint="e.g 8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/backbutton" />
+
+    <TextView
+        android:id="@android:id/text1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="75dp"
+        android:gravity="center_vertical"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        app:layout_constraintBottom_toTopOf="@+id/lstvw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/lstvw"
+        android:layout_width="414dp"
+        android:layout_height="407dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/BackToHomePageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </ListView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

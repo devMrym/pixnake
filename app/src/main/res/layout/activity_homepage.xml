@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".homepage">
+
+    <TextView
+        android:id="@+id/helloUser"
+        android:layout_width="250dp"
+        android:layout_height="89dp"
+        android:layout_marginBottom="21dp"
+        android:text="Hello !"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FF1CC0"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/PlayButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="389dp"
+        android:layout_height="212dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/pixelsnake"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/helloUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/PlayButton"
+        android:layout_width="207dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="26dp"
+        android:src="@drawable/playbutton"
+        app:layout_constraintBottom_toTopOf="@+id/ScoreButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/helloUser"
+        android:contentDescription=" "
+        android:hint="e.g 8" />
+
+    <ImageButton
+        android:id="@+id/ScoreButton"
+        android:layout_width="204dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="15dp"
+        android:contentDescription=" "
+        android:hint="e.g 8"
+        android:src="@drawable/scorebutton"
+        app:layout_constraintBottom_toTopOf="@+id/OtherButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlayButton" />
+
+    <ImageButton
+        android:id="@+id/OtherButton"
+        android:layout_width="205dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="54dp"
+        android:contentDescription=" "
+        android:hint="e.g 8"
+        android:src="@drawable/otherbutton"
+        app:layout_constraintBottom_toTopOf="@+id/SignOutButton"
+        app:layout_constraintEnd_toEndOf="@+id/SignOutButton"
+        app:layout_constraintStart_toStartOf="@+id/SignOutButton"
+        app:layout_constraintTop_toBottomOf="@+id/ScoreButton" />
+
+    <ImageButton
+        android:id="@+id/SignOutButton"
+        android:layout_width="208dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/signoutbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OtherButton"
+        android:contentDescription=" "
+        android:hint="e.g 8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
